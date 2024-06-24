@@ -8,7 +8,9 @@ public class Rota {
 
     public static Rota[] iniciarRotas(){
         Rota[] rotas = {
-                new Rota("/CriarTarefa", new controllers.CriarTarefa())
+                new Rota("/Home", new controllers.HomePage()),
+                new Rota("/CriarTarefa", new controllers.CriarTarefa()),
+                new Rota("/ConcluirTarefa", new controllers.ConcluirTarefa())
         };
         return rotas;
     }
