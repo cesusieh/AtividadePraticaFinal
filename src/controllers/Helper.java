@@ -30,10 +30,10 @@ public class Helper {
             }
             return jsons;
         } catch (IOException e) {
-            System.out.println("Erro IO");
+            System.out.println(e.getMessage());
             return null;
         } catch (JSONException e) {
-            System.out.println("erro json");
+            System.out.println("Erro na leitura do arquivo JSON");
             return null;
         }
     }
@@ -46,7 +46,7 @@ public class Helper {
             System.out.println("Não foi possivel encontrar o arquivo");
             return -1;
         } catch (IOException e) {
-            System.out.println("erro IO");
+            System.out.println(e.getMessage());
             return -1;
         } catch (NullPointerException e) {
             System.out.println("Não foi possivel encontrar o ultimo id");
